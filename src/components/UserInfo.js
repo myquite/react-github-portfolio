@@ -1,18 +1,17 @@
-import React, { Component } from "react";
+import React from "react";
 
-class UserInfo extends Component {
-  constructor(props) {
-    super(props);
+const UserInfo = (props) => {
+  return (
+    <div className="userinfo">
+      <img src={props.user.avatar_url} alt={props.user.name}/>
+      <h1>{props.user.name}</h1>
+      <h2>{props.user.login}</h2>
+      <h3>{props.user.bio}</h3>
+      <h4>Location: {props.user.location}</h4>
 
-  };
 
-  render() {
-    return (
-      <div className="userinfo">
-        
-      </div>
-    );
-  };
-};
+    </div>
+  );
+}
 
 export default UserInfo;

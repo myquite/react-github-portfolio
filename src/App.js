@@ -7,7 +7,10 @@ class App extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { user: [] };
+    this.state = { 
+      user: [],
+      repos: []
+    };
   };
 
   componentDidMount() {
@@ -16,13 +19,20 @@ class App extends Component {
     .then((user) => {
       this.setState({ user });
     });
+
+    fetch(`https://api.github.com/users/myquite/repos`)
+    .then(res => res.json())
+    .then((repos) => {
+      this.setState({ repos });
+    });
+
   }
 
   render() {
     return (
       <div className="App">
-        <UserInfo />
-        <UserProjects user={this.state.user}/>
+        <UserInfo user={this.state.user}/>
+        <UserProjects repos={this.state.repos}/>
       </div>
     );
   };
