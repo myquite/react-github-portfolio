@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import UserInfo from './components/UserInfo';
-import UserProjectList from './components/UserProjectList'
+import ProjectList from './components/ProjectList'
 
 class App extends Component {
   constructor(props) {
@@ -31,7 +31,7 @@ class App extends Component {
     return (
       <div className="App">
         <UserInfo user={this.state.user}/>
-        <UserProjectList repos={this.state.repos}/>
+        <ProjectList repos={this.state.repos}/>
       </div>
     );
   };
