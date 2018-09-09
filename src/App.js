@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import UserInfo from './components/UserInfo';
-import UserProjects from './components/UserProjects'
+import UserProjectList from './components/UserProjectList'
 
 class App extends Component {
   constructor(props) {
@@ -25,14 +25,13 @@ class App extends Component {
     .then((repos) => {
       this.setState({ repos });
     });
-
   }
 
   render() {
     return (
       <div className="App">
         <UserInfo user={this.state.user}/>
-        <UserProjects repos={this.state.repos}/>
+        <UserProjectList repos={this.state.repos}/>
       </div>
     );
   };

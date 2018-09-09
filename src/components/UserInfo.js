@@ -8,8 +8,6 @@ const UserInfo = (props) => {
       <h2>{props.user.login}</h2>
       <h3>{props.user.bio}</h3>
       <h4>Location: {props.user.location}</h4>
-
-
     </div>
   );
 }
