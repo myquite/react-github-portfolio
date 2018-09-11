@@ -15,7 +15,6 @@ class ProjectList extends Component {
   render() {
     return (
       <section className="projects">
-      <h2>My Projects</h2>
         <ul> 
           {
             this.props.repos.map((project) => {

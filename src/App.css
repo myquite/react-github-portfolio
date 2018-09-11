@@ -56,17 +56,27 @@
   font-weight: 400;
 }
 
-.projects h2 {
-  margin-top: 0;
-  color: var(--highlight-color);
-  border-bottom: 2px solid var(--highlight-color);
-}
-
 .projects ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
+
+.project {
+  margin-bottom: 2em;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.project h2 {
+  padding: 1em 1em .5em;
+  margin: 0 0 .5em;
+}
+
+.project .description {
+  padding: .5em 1em 2em;
+}
+
 
 .button {
   display: inline-block;
