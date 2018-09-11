@@ -7,20 +7,21 @@ class App extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { 
+    this.state = {
+      login: "myquite", 
       user: [],
       repos: []
     };
   };
 
   componentDidMount() {
-    fetch(`https://api.github.com/users/myquite`)
+    fetch(`https://api.github.com/users/${this.state.login}`)
     .then(res => res.json())
     .then((user) => {
       this.setState({ user });
     });
 
-    fetch(`https://api.github.com/users/myquite/repos`)
+    fetch(`https://api.github.com/users/${this.state.login}/repos`)
     .then(res => res.json())
     .then((repos) => {
       this.setState({ repos });
@@ -31,7 +32,7 @@ class App extends Component {
     return (
       <div className="App">
         <UserInfo user={this.state.user}/>
-        <ProjectList repos={this.state.repos}/>
+        <ProjectList repos={this.state.repos} login={this.state.login}/>
       </div>
     );
   };
