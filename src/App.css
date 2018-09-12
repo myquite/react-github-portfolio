@@ -20,6 +20,7 @@
 }
 
 .userinfo {
+  max-height: 620px;
   background-color: white;
   margin-bottom: 1em;
   border-radius: 5px;
