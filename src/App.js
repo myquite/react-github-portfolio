@@ -30,10 +30,10 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <section className="App">
         <UserInfo user={this.state.user}/>
         <ProjectList repos={this.state.repos} login={this.state.login}/>
-      </div>
+      </section>
     );
   };
 };

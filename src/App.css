@@ -3,26 +3,27 @@
   --highlight-color: #0275D8;
   --dark-color: #18486C;
   --light-color: #999999;
-
-  /* Layout Variables */
-  --columns: 1fr;
-  --base-grid-gap: .5em;
 }
 
 .App {
   width: 90%;
-  margin: 1em auto;
+  margin: 2em auto;
   color: var(--primary-color);
   display: grid;
-  grid-template-columns: var(--columns);
-  grid-gap: var(--base-grid-gap)
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 1em;
+  grid-template-areas: 
+    "i i i i i i i i i i i i"
+    "p p p p p p p p p p p p"
+    "p p p p p p p p p p p p";
 }
 
 .userinfo {
   background-color: white;
+  margin-bottom: 1em;
   border-radius: 5px;
-  height: 540px;
-  margin-bottom: var(--base-grid-gap);
+  grid-area: i;
 }
 
 .avatar img {
@@ -54,6 +55,10 @@
 .info h4 {
   color: var(--light-color);
   font-weight: 400;
+}
+
+.projects {
+  grid-area: p;
 }
 
 .projects ul {
@@ -102,8 +107,10 @@
 }
 
 @media all and (min-width: 700px) {
-  :root {
-    --columns: 288px 1fr;
-    --base-grid-gap: 1em;
+  .App {
+    grid-template-areas: 
+    "i i i p p p p p p p p p"
+    "o o o p p p p p p p p p"
+    "o o o p p p p p p p p p";
   }
 }
