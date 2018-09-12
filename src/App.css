@@ -101,11 +101,6 @@
   background-color: var(--highlight-color)
 }
 
-.button:visited {
-  color: var(--dark-color);
-  border: 2px solid var(--dark-color);
-}
-
 @media all and (min-width: 700px) {
   .App {
     grid-template-areas: 
