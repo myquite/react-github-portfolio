@@ -7,7 +7,7 @@
 
 .App {
   width: 90%;
-  margin: 2em auto;
+  margin: 1em auto;
   color: var(--primary-color);
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -103,6 +103,8 @@
 
 @media all and (min-width: 700px) {
   .App {
+    margin: 2em auto;
+    grid-gap: 2em;
     grid-template-areas: 
     "i i i p p p p p p p p p"
     "o o o p p p p p p p p p"
