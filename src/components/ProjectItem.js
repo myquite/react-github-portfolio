@@ -9,8 +9,7 @@ const ProjectItem = (props) => {
         <img src={`https://raw.githubusercontent.com/${props.project.full_name}/master/${props.project.name}.png`} alt="project screenshot"/>
         <div className="description">
           <p>{props.project.description}</p>
-          <a href={props.project.html_url} className="button" target="_blank">Github</a>
-          <a href={`https://${props.project.owner.login}.github.com/${props.project.name}`} className="button" target="_blank">Site</a>
+          <a href={props.project.html_url} className="button" target="_blank">GitHub</a>
         </div>
       </div>
     </li>

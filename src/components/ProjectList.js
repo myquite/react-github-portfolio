@@ -4,14 +4,6 @@ import ProjectItem from "./ProjectItem";
 
 
 class ProjectList extends Component {
-  constructor(props) {
-    super(props);
-    
-    this.state = {
-      content: [],
-    }
-  }
-
   render() {
     return (
       <section className="projects">
