@@ -9,7 +9,7 @@ const ProjectItem = (props) => {
         <img src={`https://raw.githubusercontent.com/${props.project.full_name}/master/${props.project.name}.png`} alt="project screenshot"/>
         <div className="description">
           <p>{props.project.description}</p>
-          <a href={props.project.html_url} className="button" target="_blank">GitHub</a>
+          <a href={props.project.html_url} className="button" target="_blank"><i class="fab fa-github"></i> GitHub</a>
         </div>
       </div>
     </li>
