@@ -10,7 +10,8 @@ class App extends Component {
     this.state = {
       username: "myquite", 
       user: [],
-      repos: []
+      repos: [],
+      loading: true
     };
   };
 
@@ -24,17 +25,29 @@ class App extends Component {
     fetch(`https://api.github.com/users/${this.state.username}/repos`)
     .then(res => res.json())
     .then((repos) => {
-      this.setState({ repos });
+      this.setState({ 
+        repos,
+        loading: false
+       });
     });
   }
 
   render() {
-    return (
-      <section className="App">
-        <UserInfo user={this.state.user}/>
-        <ProjectList repos={this.state.repos} username={this.state.username}/>
-      </section>
-    );
+    
+    if (this.state.loading) {
+      return (
+        <div class="loader">
+           <h1>Loading...</h1>
+        </div>
+      );
+    } else {
+      return (
+        <section className="App">
+          <UserInfo user={this.state.user}/>
+          <ProjectList repos={this.state.repos} username={this.state.username}/>
+        </section>
+      )
+    }
   };
 };
 
