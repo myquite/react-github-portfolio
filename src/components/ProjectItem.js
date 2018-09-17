@@ -6,6 +6,7 @@ const ProjectItem = (props) => {
     <li>
       <div className="project">
         <h2>{props.project.name}</h2>
+        {/* img tag is getting a .png file from the project with the same name as the project. ex. react-github-profile.png */}
         <img src={`https://raw.githubusercontent.com/${props.project.full_name}/master/${props.project.name}.png`} alt="project screenshot"/>
         <div className="description">
           <p>{props.project.description}</p>
