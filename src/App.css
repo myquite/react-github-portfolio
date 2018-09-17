@@ -96,7 +96,7 @@
 
 .button {
   display: inline-block;
-  width: 80px;
+  width: 90px;
   margin: 0 .5em 0 0;
   padding: .5em;
   color: var(--highlight-color);
