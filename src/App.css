@@ -22,20 +22,13 @@
   margin: 1em auto;
   color: var(--primary-color);
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-gap: 1em;
-  grid-template-areas: 
-    "i i i i i i i i i i i i"
-    "p p p p p p p p p p p p"
-    "p p p p p p p p p p p p";
 }
 
 .userinfo {
-  max-height: 620px;
   background-color: white;
   border-radius: 5px;
-  grid-area: i;
 }
 
 .avatar img {
@@ -68,10 +61,6 @@
   font-weight: 400;
 }
 
-.projects {
-  grid-area: p;
-}
-
 .projects ul {
   margin: 0;
   padding: 0;
@@ -79,7 +68,6 @@
 }
 
 .project {
-  margin-bottom: 2em;
   background-color: white;
   border-radius: 5px;
 }
@@ -114,11 +102,19 @@
 
 @media all and (min-width: 700px) {
   .App {
+    grid-template-columns: 1fr 3fr;
     margin: 2em auto;
     grid-gap: 2em;
-    grid-template-areas: 
-    "i i i p p p p p p p p p"
-    "o o o p p p p p p p p p"
-    "o o o p p p p p p p p p";
   }
+
+  .userinfo {
+    max-height: 620px;
+  }
+
+  .projects ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2em;
+  }
+
 }
