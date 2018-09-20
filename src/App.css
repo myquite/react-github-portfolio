@@ -79,6 +79,10 @@
   margin: 0 0 .5em;
 }
 
+.project img {
+  background-color: var(--light-color);
+}
+
 .project .description {
   padding: .5em 1em 2em;
 }

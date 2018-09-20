@@ -40,7 +40,7 @@ class App extends Component {
   render() {
     if (this.state.loading) {
       return (
-        <div class="loader">
+        <div className="loader">
            <h1>Loading...</h1>
         </div>
       );

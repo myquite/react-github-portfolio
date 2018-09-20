@@ -9,9 +9,9 @@ const UserInfo = (props) => {
       </div>
       <div className="info">
         <h1>{props.user.name}</h1>
-        <h2><a href={props.user.html_url}><i class="fab fa-github"></i> {props.user.login}</a></h2>
+        <h2><a href={props.user.html_url}><i className="fab fa-github"></i> {props.user.login}</a></h2>
         <h3>{props.user.bio}</h3>
-        <h4><i class="fas fa-map-marker-alt"></i> {props.user.location}</h4>
+        <h4><i className="fas fa-map-marker-alt"></i> {props.user.location}</h4>
       </div>
     </div>
   );
