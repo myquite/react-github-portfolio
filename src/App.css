@@ -61,6 +61,19 @@
   font-weight: 400;
 }
 
+.hireable {
+  background-color: var(--highlight-color);
+  border-radius: 0 0 5px 5px;
+  text-align: center;
+}
+
+.hireable a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: .25em;
+}
+
 .projects ul {
   display: grid;
   grid-gap: 1em;
@@ -120,7 +133,6 @@
   .projects ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 2em;
+    grid-gap: 2em; 
   }
-
 }

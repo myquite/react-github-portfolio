@@ -1,6 +1,8 @@
 import React from "react";
 import '../App.css';
 
+import Hireable from './Hireable';
+
 const UserInfo = (props) => {
   return (
     <div className="userinfo">
@@ -13,6 +15,7 @@ const UserInfo = (props) => {
         <h3>{props.user.bio}</h3>
         <h4><i className="fas fa-map-marker-alt"></i> {props.user.location}</h4>
       </div>
+      <Hireable user={props.user} contact={props.contact}/>
     </div>
   );
 }

@@ -11,7 +11,8 @@ class App extends Component {
     super(props);
 
     this.state = {
-      username: "myquite", // username is the github profile that will be fetched. 
+      username: "myquite", // username is the github profile that will be fetched.
+      contact: "myquite@gmail.com", // email used in Hireable component.
       user: [],
       repos: [],
       loading: true
@@ -46,11 +47,11 @@ class App extends Component {
       );
     } else {
       return (
-        <section className="App">
+        <div className="App">
           <Helmet title={this.state.user.name + "'s Portfolio"} /> 
-          <UserInfo user={this.state.user}/>
+          <UserInfo user={this.state.user} contact={this.state.contact}/>
           <ProjectList repos={this.state.repos} username={this.state.username}/>
-        </section>
+        </div>
       )
     }
   };
