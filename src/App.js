@@ -48,7 +48,7 @@ class App extends Component {
     } else {
       return (
         <div className="App">
-          <Helmet title={this.state.user.name + "'s Portfolio"} /> 
+          <Helmet title={this.state.user.name + "'s Portfolio"}/> 
           <UserInfo user={this.state.user} contact={this.state.contact}/>
           <ProjectList repos={this.state.repos} username={this.state.username}/>
         </div>

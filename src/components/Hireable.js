@@ -6,7 +6,7 @@ const Hireable = (props) => {
     return (
       <div className="hireable">
         <a href={`mailto:${props.contact}`}>
-          <p>Would you like to hire me?</p>
+          <p><i className="fas fa-envelope"></i> I'm available for hire</p>
         </a>
       </div>
     );
@@ -16,3 +16,4 @@ const Hireable = (props) => {
 }
 
 export default Hireable;
+
