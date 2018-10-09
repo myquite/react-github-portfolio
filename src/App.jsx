@@ -4,20 +4,20 @@ import { Helmet } from 'react-helmet';
 import './App.css';
 
 import UserInfo from './components/UserInfo';
-import ProjectList from './components/ProjectList'
+import ProjectList from './components/ProjectList';
 
 class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      username: "myquite", // username is the github profile that will be fetched.
-      contact: "myquite@gmail.com", // email used in Hireable component.
+      username: 'myquite', // username is the github profile that will be fetched.
+      contact: 'myquite@gmail.com', // email used in Hireable component.
       user: [],
       repos: [],
-      loading: true
+      loading: true,
     };
-  };
+  }
 
   componentDidMount() {
     // Gather user info for UserInfo component.
@@ -33,7 +33,7 @@ class App extends Component {
       .then((repos) => {
         this.setState({
           repos,
-          loading: false
+          loading: false,
         });
       });
   }
@@ -41,20 +41,19 @@ class App extends Component {
   render() {
     if (this.state.loading) {
       return (
-        <div className="loader">
-          <h1>Loading...</h1>
-        </div>
+          <div className="loader">
+            <h1>Loading...</h1>
+          </div>
       );
-    } else {
-      return (
-        <div className="App">
-          <Helmet title={this.state.user.name + "'s Portfolio"} />
-          <UserInfo user={this.state.user} contact={this.state.contact} />
-          <ProjectList repos={this.state.repos} username={this.state.username} />
-        </div>
-      )
     }
-  };
-};
+    return (
+          <div className="App">
+              <Helmet title={`${this.state.user.name  }'s Portfolio`} />
+              <UserInfo user={this.state.user} contact={this.state.contact} />
+              <ProjectList repos={this.state.repos} username={this.state.username} />
+            </div>
+    );
+  }
+}
 
 export default App;
