@@ -12,7 +12,10 @@ const UserInfo = props => {
       <div className="info">
         <h1>
           {props.user.name}
-          <a href={props.user.html_url}>
+          <a
+            href={props.user.html_url}
+            aria-label={props.user.name + "'s GitHub Profile"}
+          >
             <i className="fab fa-github" />
           </a>
         </h1>
