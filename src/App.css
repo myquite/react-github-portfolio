@@ -1,8 +1,8 @@
 /* -- Color Palette -- */
 :root {
-  --primary-color: #202125;
-  --secondary-color: #0275d8;
-  --darker-secondary-color: #18486c;
+  --primary-color: #333333;
+  --secondary-color: #008cba;
+  --darker-secondary-color: #194c71;
 }
 
 /* -- Reset -- */
@@ -124,13 +124,14 @@ body {
   margin-bottom: 1rem;
 }
 
-.userinfo a {
+.userinfo h1 a {
+  margin-left: 1rem;
   text-decoration: none;
   color: var(--secondary-color);
   transition: all ease-in-out 250ms;
 }
 
-.userinfo h2 a:hover {
+.userinfo h1 a:hover {
   color: var(--darker-secondary-color);
 }
 
@@ -162,6 +163,7 @@ body {
 
 .project {
   grid-area: p;
+  height: 100%;
 }
 
 /* -- Grid Layout -- */
@@ -173,12 +175,13 @@ body {
     grid-gap: 1rem;
     grid-template-areas:
       'u ps'
-      'u ps'
+      'e ps'
       'e ps';
   }
 
   .projects ul {
     display: grid;
+    grid-gap: 1rem;
     grid-template-areas:
       'p'
       'p'
@@ -193,7 +196,7 @@ body {
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas:
       'u ps ps'
-      'u ps ps'
+      'e ps ps'
       'e ps ps';
   }
 

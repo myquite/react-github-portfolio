@@ -10,16 +10,17 @@ const UserInfo = props => {
         <img src={props.user.avatar_url} alt={props.user.name} />
       </div>
       <div className="info">
-        <h1>{props.user.name}</h1>
-        <h2>
+        <h1>
+          {props.user.name}
           <a href={props.user.html_url}>
-            <i className="fab fa-github" /> {props.user.login}
+            <i className="fab fa-github" />
           </a>
-        </h2>
+        </h1>
+
         <p>{props.user.bio}</p>
-        <h4>
+        <p>
           <i className="fas fa-map-marker-alt" /> {props.user.location}
-        </h4>
+        </p>
       </div>
       <Hireable user={props.user} contact={props.contact} />
     </div>
