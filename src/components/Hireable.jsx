@@ -1,12 +1,14 @@
 import React from 'react';
 import '../App.css';
 
-const Hireable = (props) => {
+const Hireable = props => {
   if (props.user.hireable) {
     return (
       <div className="hireable">
         <a href={`mailto:${props.contact}`}>
-          <p><i className="fas fa-envelope"></i> Available for Hire</p>
+          <p>
+            <i className="fas fa-envelope" /> Available for Hire
+          </p>
         </a>
       </div>
     );
@@ -16,4 +18,3 @@ const Hireable = (props) => {
 };
 
 export default Hireable;
-
