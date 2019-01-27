@@ -42,7 +42,7 @@ class App extends Component {
     if (this.state.loading) {
       return (
         <div className="loader">
-          <h1>Loading...</h1>
+          <span />
         </div>
       );
     } else {
