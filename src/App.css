@@ -59,8 +59,44 @@ body {
 }
 
 body {
-  width: 90%;
-  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+}
+
+.app {
+  margin: 1rem;
+  display: grid;
+  grid-gap: 1rem;
+}
+
+/* -- Loader -- */
+
+.loader {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader span {
+  width: 50px;
+  height: 50px;
+  border-top: 10px solid #008cba;
+  border-right: 10px solid #008cba;
+  border-bottom: 10px solid #008cba;
+  border-left: 10px solid #ffffff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* -- Card -- */
@@ -73,7 +109,6 @@ body {
   color: rgb(33, 37, 41);
   display: flex;
   flex-direction: column;
-  margin-bottom: 1rem;
 }
 
 .card img {
@@ -96,6 +131,7 @@ body {
 }
 
 .button {
+  width: 30%;
   text-decoration: none;
   color: white;
   border: 1px solid var(--secondary-color);
@@ -113,7 +149,7 @@ body {
 /* -- UserInfo Component -- */
 
 .userinfo {
-  grid-area: u;
+  max-height: 625px;
 }
 
 .userinfo .avatar img {
@@ -157,87 +193,34 @@ body {
 
 /* -- Projects -- */
 
-.projects {
-  grid-area: ps;
+.projects ul {
+  display: grid;
+  grid-gap: 1rem;
 }
 
 .project {
-  grid-area: p;
-  height: 100%;
+  display: flex;
 }
 
 /* -- Grid Layout -- */
 
 @media screen and (min-width: 460px) {
   .app {
-    width: 80%;
     display: grid;
     grid-gap: 1rem;
-    grid-template-columns: 300px 460px;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas:
-      'u ps'
-      'e ps'
-      'e ps';
-  }
-
-  .projects ul {
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-areas:
-      'p'
-      'p'
-      'p';
+    grid-template-columns: 300px 1fr;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .app {
-    width: 80%;
-    display: grid;
-    grid-template-columns: 300px 460px 460px;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas:
-      'u ps ps'
-      'e ps ps'
-      'e ps ps';
-  }
-
   .projects ul {
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-areas:
-      'p p'
-      'p p'
-      'p p';
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .project {
+    min-height: 480px;
   }
 }
 
-/* Loader */
-.loader {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.loader span {
-  width: 50px;
-  height: 50px;
-  border-top: 10px solid #008cba;
-  border-right: 10px solid #008cba;
-  border-bottom: 10px solid #008cba;
-  border-left: 10px solid #ffffff;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
+/* TODO */
+/* Move the button to the bottom of the card when card is at a fixed height. */
