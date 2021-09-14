@@ -1,7 +1,7 @@
-import React from 'react';
-import '../App.css';
+import React from "react";
+import "../App.css";
 
-const Hireable = props => {
+const Hireable = (props) => {
   if (props.user.hireable) {
     return (
       <div className="hireable">

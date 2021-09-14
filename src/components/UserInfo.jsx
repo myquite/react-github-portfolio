@@ -1,15 +1,15 @@
-import React from 'react';
-import '../App.css';
+import React from "react";
+import "../App.css";
 
-import Hireable from './Hireable';
+import Hireable from "./Hireable";
 
-const UserInfo = props => {
+const UserInfo = (props) => {
   return (
     <div className="card userinfo">
       <div className="avatar">
         <img src={props.user.avatar_url} alt={props.user.name} />
       </div>
-      <div className="info">
+      <div className="card-body">
         <h1>
           {props.user.name}
           <a

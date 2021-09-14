@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import '../App.css';
+import React, { Component } from "react";
+import "../App.css";
 
 class ProjectItem extends Component {
   constructor(props) {
@@ -7,23 +7,22 @@ class ProjectItem extends Component {
 
     this.state = {
       bgColor: [
-        '#F0AD4E',
-        '#5CB85C',
-        '#0275D8',
-        '#D9534F',
-        '#D34CFE',
-        '#F8D71C'
+        "#F0AD4E",
+        "#5CB85C",
+        "#0275D8",
+        "#D9534F",
+        "#D34CFE",
+        "#F8D71C",
       ],
-      selectedColor: ''
+      selectedColor: "",
     };
   }
 
   getRandomColor() {
-    let item = this.state.bgColor[
-      Math.floor(Math.random() * this.state.bgColor.length)
-    ];
+    let item =
+      this.state.bgColor[Math.floor(Math.random() * this.state.bgColor.length)];
     this.setState({
-      selectedColor: item
+      selectedColor: item,
     });
   }
 
@@ -41,15 +40,13 @@ class ProjectItem extends Component {
           */}
           <img
             style={{ backgroundColor: this.state.selectedColor }}
-            src={`https://raw.githubusercontent.com/${
-              this.props.project.full_name
-            }/master/${this.props.project.name}.png`}
-            onError={e => {
-              e.target.src = require('../images/imgDefault.png');
+            src={`https://raw.githubusercontent.com/${this.props.project.full_name}/master/${this.props.project.name}.png`}
+            onError={(e) => {
+              e.target.src = require("../images/imgDefault.png");
             }}
             alt="project screenshot"
           />
-          <div className="description">
+          <div className="card-body">
             <h2>{this.props.project.name}</h2>
             <p>{this.props.project.description}</p>
             <a
