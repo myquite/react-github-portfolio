@@ -60,8 +60,7 @@ body {
 }
 
 body {
-  display: flex;
-  justify-content: center;
+  background-color: #e7eaed;
 }
 
 .app {
@@ -85,7 +84,7 @@ body {
   border-top: 10px solid #008cba;
   border-right: 10px solid #008cba;
   border-bottom: 10px solid #008cba;
-  border-left: 10px solid #ffffff;
+  border-left: 10px solid #e7eaed;
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
@@ -102,9 +101,9 @@ body {
 /* -- Card -- */
 .card {
   width: 90%;
-  max-width: 500px;
+  max-width: 460px;
   margin: 1rem auto;
-  border: 1px solid #e7eaed;
+  background-color: white;
   border-radius: 8px;
 }
 
@@ -119,6 +118,12 @@ body {
 }
 
 /* -- UserInfo Component -- */
+.userInfo {
+}
+
+/* -- Projects Component -- */
+.projects {
+}
 
 /* -- Hireable Component -- */
 .hireable {
@@ -144,11 +149,10 @@ body {
 
 /* -- Grid Layout -- */
 
-@media screen and (min-width: 460px) {
+@media screen and (min-width: 920px) {
+  .app {
+  }
 }
 
 @media screen and (min-width: 1440px) {
 }
-
-/* TODO */
-/* Move the button to the bottom of the card when card is at a fixed height. */
