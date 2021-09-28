@@ -118,12 +118,12 @@ body {
 }
 
 /* -- UserInfo Component -- */
-.userInfo {
-}
+/* .userInfo {
+} */
 
 /* -- Projects Component -- */
-.projects {
-}
+/* .projects {
+} */
 
 /* -- Hireable Component -- */
 .hireable {
@@ -149,10 +149,8 @@ body {
 
 /* -- Grid Layout -- */
 
-@media screen and (min-width: 920px) {
-  .app {
-  }
-}
+/* @media screen and (min-width: 920px) {
+} */
 
-@media screen and (min-width: 1440px) {
-}
+/* @media screen and (min-width: 1440px) {
+} */
