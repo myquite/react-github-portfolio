@@ -185,7 +185,7 @@ body {
 @media screen and (min-width: 920px) {
   .app {
     grid-template-columns: 1fr 2fr;
-    grid-gap: 2rem;
+    gap: 2rem;
   }
   .userInfo {
     max-height: 600px;
@@ -195,7 +195,7 @@ body {
 @media screen and (min-width: 1400px) {
   .app {
     grid-template-columns: 1fr 2fr;
-    grid-gap: 2rem;
+    gap: 2rem;
   }
   .userInfo {
     max-height: 100vh;
@@ -204,6 +204,7 @@ body {
     max-height: 100vh;
     overflow-y: scroll;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(460px, 1fr));
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   }
 }
