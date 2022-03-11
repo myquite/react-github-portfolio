@@ -66,3 +66,4 @@ class ProjectItem extends Component {
 export default ProjectItem;
 
 // https://raw.githubusercontent.com/myquite/multiplication-flashcards/master/multiplication_flashcards.png
+// image size should be 1440x777
