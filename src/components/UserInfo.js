@@ -5,7 +5,7 @@ import Hireable from "./Hireable";
 
 const UserInfo = (props) => {
   return (
-    <div className="card userinfo">
+    <div className="card userInfo">
       <div className="avatar">
         <img src={props.user.avatar_url} alt={props.user.name} />
       </div>

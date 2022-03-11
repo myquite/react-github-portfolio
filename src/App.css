@@ -81,9 +81,9 @@ body {
 .loader span {
   width: 50px;
   height: 50px;
-  border-top: 10px solid #008cba;
-  border-right: 10px solid #008cba;
-  border-bottom: 10px solid #008cba;
+  border-top: 10px solid var(--secondary-color);
+  border-right: 10px solid var(--secondary-color);
+  border-bottom: 10px solid var(--secondary-color);
   border-left: 10px solid #e7eaed;
   border-radius: 50%;
   animation: spin 1s linear infinite;
@@ -101,7 +101,6 @@ body {
 /* -- Card -- */
 .card {
   width: 90%;
-  max-width: 460px;
   margin: 1rem auto;
   background-color: white;
   border-radius: 8px;
@@ -112,18 +111,52 @@ body {
 }
 
 .card-body {
-  display: grid;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
   padding: 1rem 1rem;
 }
 
-/* -- UserInfo Component -- */
-/* .userInfo {
-} */
+.project .card-body p {
+  flex: auto;
+}
 
-/* -- Projects Component -- */
-/* .projects {
-} */
+.project .card-body a {
+  flex-shrink: 0;
+}
+
+.userInfo {
+  max-width: 460px;
+}
+
+.userInfo img {
+  border-radius: 8px 8px 0 0;
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  background-color: var(--secondary-color);
+  color: #e7eaed;
+  border-radius: 4px;
+  text-align: center;
+  transition: background-color ease 500ms;
+}
+
+.button:hover {
+  background-color: var(--darker-secondary-color);
+}
+
+.userInfo .card-body a {
+  color: var(--secondary-color);
+  padding-left: 1rem;
+  transition: color ease 500ms;
+}
+
+.userInfo .card-body a:hover {
+  color: var(--darker-secondary-color);
+  padding-left: 1rem;
+}
 
 /* -- Hireable Component -- */
 .hireable {
@@ -149,8 +182,28 @@ body {
 
 /* -- Grid Layout -- */
 
-/* @media screen and (min-width: 920px) {
-} */
+@media screen and (min-width: 920px) {
+  .app {
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 2rem;
+  }
+  .userInfo {
+    max-height: 600px;
+  }
+}
 
-/* @media screen and (min-width: 1440px) {
-} */
+@media screen and (min-width: 1400px) {
+  .app {
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 2rem;
+  }
+  .userInfo {
+    max-height: 100vh;
+  }
+  .projects ul {
+    max-height: 100vh;
+    overflow-y: scroll;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(460px, 1fr));
+  }
+}
